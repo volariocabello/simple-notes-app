@@ -2,10 +2,13 @@ import React from "react";
 import Typography from "antd/es/typography/Typography";
 import { Button } from "antd";
 import { Link } from "react-router-dom";
+import { UserAuth } from "../context/AuthContext";
 const { Title } = Typography;
 const { Paragraph } = Typography;
 
 function Home() {
+	const { user, logOut } = UserAuth();
+
 	return (
 		<div className='Home'>
 			<header className='flex justify-center pt-20'>
